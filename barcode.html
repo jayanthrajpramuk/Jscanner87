@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Barcode Scanner</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* In order to place the tracking correctly */
+        canvas.drawing, canvas.drawingBuffer {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+<script src="js/adapter-latest.js"></script>
+<script src="js/live-locator.js"></script>
+-->
+    <script>
+        $( document ).ready(function() {
+            $.getScript("js/quagga.min.js");
+            $.getScript("js/adapter-latest.js");
+            $.getScript("js/live-locator.js");
+            $.getScript("js/barcode.js");
+        });
+
+        $( window ).on( "load", function() {
+            console.log( "window loaded" );
+        });
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<div class="mx-auto" style="width: 700px;margin: 30px">
+    <input type="button" id="btn" value="Start/Stop the scanner" />
+    <br>
+    <div> <div id="scanner-container"><video class="bor" playsinline autoplay></video></div></div>
+
+
+
+<br>
+<a href="home.html">Home</a>
+</div>
+
+</body>
+
+</html>
